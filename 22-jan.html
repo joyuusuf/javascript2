@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- write algorithm on password. Let your password be showing and hidden -->
+    <input type="password"  id="password" onclick="taap()">
+    <span id="showw">Show</span>
+
+
+<!-- write an algorithm on clicking the input that changes the color of h1  -->
+    <input type="color" id="color" onchange="changeColor()">
+    <h1 id="textColor">This is all about color.</h1>
+
+
+
+
+    <!-- write an algorithm that shows ordinary 50 characters in textbox. -->
+    <div id="counter">
+        <span id="characterCounter">0</span>
+        <span>/</span>
+        <span id="characters">50</span>
+    </div>
+
+    <textarea id="textarea" cols="30" rows="10" oninput="typing()" maxlength="50"></textarea>
+</body>
+</html>
+<script>
+        let password=document.getElementById('password')
+        let showw = document.getElementById('showw')
+
+
+
+        let color =document.getElementById('color')
+        let textColor=document.getElementById('textColor')
+            function changeColor(){
+                textColor.style.color=color.value
+            }
+
+
+
+
+    let count=document.getElementById('characterCounter')
+    let well = document.getElementById('textarea')
+
+    function typing(){
+            count.innerHTML=well.value.length
+            if(well.value){
+                well.value.length=well.value.maxlength
+            }
+    }
+</script>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> g h i</p>
+    <button  onclick="mm()">g</button>
+    <button onclick="nn()">h</button>
+    <button onclick="oo()">i</button>
+<input type="text" id="bb">
+    <h1 id="tt"></h1>
+</body>
+</html>
+
+<script>
+    // console.log(true && false)
+
+    let hh=document.getElementById('bb')
+
+    function mm(){
+        if(hh.value >= 0 && hh.value < 1/3 ){
+            tt.innerHTML=true
+        } else{
+            tt.innerHTML=false
+        }
+    } 
+function nn(){
+    if(hh.value >=1/3 && hh.value < 2/3){
+        tt.innerHTML=true 
+        }else{
+            tt.innerHTML=false
+        }
+
+
+}  
+
+function oo(){
+    if(hh.value >=2/3 && hh.value < 1){
+        tt.innerHTML=true
+    } else{
+        tt.innerHTML=false
+    }
+}
+</script>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arraypra</title>
+</head>
+<body>
+    <input type="text" id="input">
+    <button onclick="clic()"> Show Me</button>
+    <h1 id="display"></h1>
+
+    <input type="text" id="input2">
+    <button onclick="remove()">Delete Items</button>
+</body>
+</html>
+<script>
+    let input = document.getElementById('input')
+    let array = []
+    let input2 = document.getElementById('input2')
+
+    function clic() {
+        array.push(input.value);
+        fuckoff();
+    }
+
+    function fuckoff(){
+        display.innerHTML=array.join("<br>");
+    }
+
+ function remove() {
+     if (array.includes(input2.value)==true) {
+        array.splice(array.indexOf(input2.value), 1)
+    }
+    fuckoff()
+ }
+
+</script>

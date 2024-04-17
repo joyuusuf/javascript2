@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input">
+    <button onclick="add()">Add Items</button>
+    <h1 id="display"></h1>
+
+    <input type="text" id="input2">
+    <button onclick="remove()">REmove Items</button>
+</body>
+</html>
+
+<script>
+    let input = document.getElementById('input')
+    let display = document.getElementById('display')
+    let nothing = []
+    let input2 = document.getElementById('input2')
+
+    function add() {
+        nothing.push(input.value);
+        show()
+    }
+
+    function show() {
+        display.innerHTML=nothing.join('<br>')
+    }
+
+
+    function remove() {
+        if (nothing.includes(input2.value)===true) {
+            nothing.splice(input2.value.indexOf(input.value, 1))
+            show()
+        }
+        
+    }
+    
+</script>
